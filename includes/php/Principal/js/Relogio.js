@@ -17,17 +17,6 @@ function atualizaHora() {
     var configLocal = 'pt-BR'; // Configuração do local
     var configDate  = {weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'};
   
-    /* 
-      TEMAS (cor e imagem de fundo)
-      =======
-      Teste os temas descomentando uma das linhas abaixo. 
-      Depois salve o arquivo e atualize a página em seu navegador.
-    */
-  
-    // horaAtual = 6;   /* Bom dia */
-    // horaAtual = 12;  /* Boa tarde */
-    // horaAtual = 18;  /* Boa noite */
-    // horaAtual = 0;   /* Boa madrugada */
   
     // Teste para alterar o tema de acordo com a hora do dia
     if ( horaAtual < 6 ) {

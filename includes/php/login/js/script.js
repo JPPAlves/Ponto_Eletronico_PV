@@ -1,9 +1,6 @@
 const imgs = Array.from(document.querySelectorAll(".frame img"));
 const bullets = Array.from(document.querySelectorAll(".bullet"));
 const controlBox = document.querySelector(".control");
-const form = document.querySelector("form");
-const submitBtnTxt = document.querySelector(".submit .txt");
-const submitBtnSpinner = document.querySelector(".submit .spinner");
 let interval;
 let idx = 0;
 
@@ -34,7 +31,6 @@ const autoPlay = () => {
   }, 6000);
 };
 
-
 // Evento de clique nas balas
 bullets.forEach((bullet, _idx) => {
   bullet.addEventListener("click", () => {
@@ -50,21 +46,6 @@ controlBox.addEventListener("mouseenter", () => {
 });
 controlBox.addEventListener("mouseleave", () => {
   autoPlay();
-});
-
-// Evento de envio do formulário
-form.addEventListener("submit", e => {
-  e.preventDefault();
-  submitBtnTxt.style.display = "none";
-  submitBtnSpinner.style.display = "initial";
-  submit.classList.add("disabled");
-  form.reset();
-
-  setTimeout(() => {
-    submitBtnTxt.style.display = "initial";
-    submitBtnSpinner.style.display = "none";
-    submit.classList.remove("disabled");
-  }, 500);
 });
 
 // Iniciar a reprodução automática do slider

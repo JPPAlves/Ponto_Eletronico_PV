@@ -62,7 +62,7 @@
 
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
+            <a class="nav-link" href="/Projeto/PontoEletronicoPV/includes/php/ValidasSessao/logout.php">
               <i class="fa fa-fw fa-sign-out"></i>Sair</a>
           </li>
         </ul>
