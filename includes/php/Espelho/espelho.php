@@ -1,3 +1,8 @@
+<?php
+session_start();
+include('/xampp1/htdocs/Projeto/PontoEletronicoPV/includes/php/ValidasSessao/conexaodb.php');
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -5,28 +10,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Espelho</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/styleEspelho.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+     
 </head>
 
 <body>
-    <?php
-    // Caminho relativo para a navbar.php
-    include('C:\xampp1\htdocs\Projeto\PontoEletronicoPV\includes\templetes\navbar.php');
-    ?>
-
+    <?php include('/xampp1/htdocs/Projeto/PontoEletronicoPV/includes/templetes/navbar.php'); ?>
     <div class="content-wrapper">
         <div class="container-fluid">
-            <!-- Conteúdo da Página -->
             <div class="content">
-                <h1>Bem-vindo à Minha Página de Espelho</h1>
+                <h3>Espelho de Batida</h3>
+                <div class="filter-container">         
+                <h2>Tabela de Registros de Ponto Do Mês Atual</h2>
+                </div>
+                <table id="reportTable">
 
+                    <tbody id="reportBody">
+                    <?php include('/xampp1/htdocs/Projeto/PontoEletronicoPV/includes/php/Espelho/buscaResgistro.php'); ?>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
-    </div>
-
-
-
 </body>
 
 </html>

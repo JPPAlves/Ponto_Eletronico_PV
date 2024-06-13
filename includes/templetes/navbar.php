@@ -4,10 +4,10 @@
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css'>
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.16/css/dataTables.bootstrap4.css'>
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css'>
-  <link rel="stylesheet" href="styleNavbar.css">
+  
 </head>
 
-<body>s
+
   <!-- partial:index.partial.html -->
 
   <body class="fixed-nav sticky-footer bg-dark" id="page-top">
@@ -23,7 +23,7 @@
 
           <!-- Itens da barra lateral -->
           <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Inicio">
-            <a class="nav-link" href="">
+            <a class="nav-link" href="/Projeto/PontoEletronicoPV/includes/php/Principal/painel.php">
               <i class="fa fa-fw fa fa-home"></i>
               <span class="nav-link-text">Inicio</span>
             </a>
@@ -38,15 +38,15 @@
             </a>
             <ul class="sidenav-second-level collapse" id="collapsePonto">
               <li>
-                <a class="fa fa-plus-circle" href=""> Incluir Batida</a>
+                <a class="fa fa-plus-circle" href="/Projeto/PontoEletronicoPV/includes/php/IncluirPonto/incluirPonto.php"> Incluir Batida</a>
               </li>
               <li>
-                <a class="fa fa-table" href=""> Espelho de Ponto</a>
+                <a class="fa fa-table" href="/Projeto/PontoEletronicoPV/includes/php/Espelho/espelho.php"> Espelho de Ponto</a>
               </li>
             </ul>
           </li>
           <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Espelho">
-            <a class="nav-link" href="">
+            <a class="nav-link" href="/Projeto/PontoEletronicoPV/includes/php/Espelho/espelho.php">
               <i class="fa fa-fw fa-table"></i>
               <span class="nav-link-text">Espelho</span>
             </a>

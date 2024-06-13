@@ -15,8 +15,10 @@
             var pos = {
                 lat: position.coords.latitude,
                 lng: position.coords.longitude
+                
             };
 
+            console.log(pos);
             marker.setPosition(pos);
             map.setCenter(pos);
         }, function() {
@@ -35,3 +37,5 @@
               'Erro: O serviço de geolocalização falhou.' :
               'Erro: Seu navegador não suporta geolocalização.');
   }
+
+  

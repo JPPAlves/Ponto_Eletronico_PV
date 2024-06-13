@@ -1,0 +1,18 @@
+
+/* Estilos CSS para a tabela */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+th, td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+th {
+    background-color: #f2f2f2;
+}
+.has-justificativa {
+    color: #ffd700; /* Cor amarelo escuro para o texto */
+}
