@@ -60,8 +60,8 @@ include('/xampp1/htdocs/Projeto/PontoEletronicoPV/includes/php/IncluirPonto/save
     </div>
     <!-- Inclua o js -->
     <script src="./js/GeocodificacaoApi.js"></script>
-    <script src="./js/GeolocalizacaoApi.js">
-    </script> <script src="./js/script.js"></script>
+    <script src="./js/GeolocalizacaoApi.js"></script> 
+    <script src="./js/script.js"></script>
 
 </body>
 
