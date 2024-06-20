@@ -1,5 +1,6 @@
 function registerPonto() {
     var location = document.getElementById('local').innerHTML;
+    
     var time = new Date().toLocaleTimeString(); 
     var today = new Date().toDateString(); 
 
@@ -12,6 +13,7 @@ function registerPonto() {
             updateHora(time, today);
         }
     };
+
     xhttp.open("POST", "saveLocation.php", true);
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhttp.send("location=" + location + "&time=" + time + "&today=" + today);

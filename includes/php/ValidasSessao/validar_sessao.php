@@ -1,7 +1,10 @@
 <?php
 session_start();
 
-include('/xampp1/htdocs/Projeto/PontoEletronicoPV/includes/php/ValidasSessao/conexaodb.php');
+// Incluir o arquivo conexao.php
+include(__DIR__ . '/../ValidasSessao/conexaodb.php');
+
+
 
 if(isset($_POST['usuario']) && isset($_POST['senha'])) {
     if(empty($_POST['usuario'])) {

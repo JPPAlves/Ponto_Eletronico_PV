@@ -1,9 +1,11 @@
 <?php
-if (session_status() == PHP_SESSION_NONE) {
-    session_start();
-}
 
-include('/xampp1/htdocs/Projeto/PontoEletronicoPV/includes/php/ValidasSessao/conexaodb.php');
+// Incluir o arquivo conexao.php
+include(__DIR__ . '/../ValidasSessao/conexaodb.php');
+
+// Incluir o arquivo proteção.php
+include(__DIR__ . '/../ValidasSessao/protect.php');
+
 
 $id_usuario = $_SESSION['id'];
 $selectedMonth = isset($_GET['selectedMonth']) ? $_GET['selectedMonth'] : '';

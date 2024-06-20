@@ -1,6 +1,11 @@
 <?php
 session_start();
-include('/xampp1/htdocs/Projeto/PontoEletronicoPV/includes/php/ValidasSessao/conexaodb.php');
+
+// Incluir o arquivo conexao.php
+include(__DIR__ . '/../ValidasSessao/conexaodb.php');
+
+// Incluir o arquivo proteção.php
+include(__DIR__ . '/../ValidasSessao/protect.php');
 ?>
 
 <!DOCTYPE html>
@@ -16,18 +21,26 @@ include('/xampp1/htdocs/Projeto/PontoEletronicoPV/includes/php/ValidasSessao/con
 </head>
 
 <body>
-    <?php include('/xampp1/htdocs/Projeto/PontoEletronicoPV/includes/templetes/navbar.php'); ?>
+<?php
+// Verificar o caminho completo
+echo __DIR__ . '/../../templetes/navbar.php';
+
+// Incluir o arquivo navbar.php
+include(__DIR__ . '/../../templetes/navbar.php');
+?>
+ 
     <div class="content-wrapper">
         <div class="container-fluid">
             <div class="content">
-                <h3>Espelho de Batida</h3>
                 <div class="filter-container">         
                 <h2>Tabela de Registros de Ponto Do Mês Atual</h2>
                 </div>
                 <table id="reportTable">
 
                     <tbody id="reportBody">
-                    <?php include('/xampp1/htdocs/Projeto/PontoEletronicoPV/includes/php/Espelho/buscaResgistro.php'); ?>
+                    <?php 
+                    include(__DIR__ . '/../Espelho/buscaResgistro.php'); 
+                    ?>
                     </tbody>
                 </table>
             </div>

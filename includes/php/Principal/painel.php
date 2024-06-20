@@ -1,5 +1,5 @@
 <?php
-include('/xampp1/htdocs/Projeto/PontoEletronicoPV/includes/php/ValidasSessao/protect.php');
+include(__DIR__ . '/../ValidasSessao/protect.php');
 ?>
 
 <!DOCTYPE html>
@@ -12,10 +12,14 @@ include('/xampp1/htdocs/Projeto/PontoEletronicoPV/includes/php/ValidasSessao/pro
 </head>
 
 <body>
-    <?php
-    // Caminho relativo para a navbar.php
-    include('C:\xampp1\htdocs\Projeto\PontoEletronicoPV\includes\templetes\navbar.php');
-    ?>
+<?php
+// Verificar o caminho completo
+echo __DIR__ . '/../../templetes/navbar.php';
+
+// Incluir o arquivo navbar.php
+include(__DIR__ . '/../../templetes/navbar.php');
+?>
+ 
     <div class="content-wrapper">
         <div class="container-fluid">
             <!-- Conteúdo da Página -->
@@ -63,7 +67,7 @@ include('/xampp1/htdocs/Projeto/PontoEletronicoPV/includes/php/ValidasSessao/pro
                     Av. Aqui vai aparecer meu Endereço, 1234
                 </div>
                 <div class="Rhora">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                         <path fill="#FFD43B" d="M464 256A208 208 0 1 1 48 256a208 208 0 1 1 416 0zM0 256a256 256 0 1 0 512 0A256 256 0 1 0 0 256zM232 120V256c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2V120c0-13.3-10.7-24-24-24s-24 10.7-24 24z" />
                     </svg>
                     <h6>Não Há Pobreza que Resistar a 12 Horas de trabalho</h6>

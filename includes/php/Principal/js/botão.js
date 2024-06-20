@@ -1,3 +1,4 @@
+
 // ammount to add on each button press
 const confettiCount = 20
 const sequinCount = 10
@@ -236,6 +237,3 @@ textElements.forEach((element) => {
 // kick off the render loop
 window.initBurst()
 render()
-
-
-

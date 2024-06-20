@@ -1,6 +1,11 @@
 <?php
-include('/xampp1/htdocs/Projeto/PontoEletronicoPV/includes/php/ValidasSessao/protect.php');
-include('/xampp1/htdocs/Projeto/PontoEletronicoPV/includes/php/IncluirPonto/saveincluir.php');
+
+// Incluir o arquivo conexao.php
+include(__DIR__ . '/../ValidasSessao/conexaodb.php');
+
+// Incluir o arquivo proteção.php
+include(__DIR__ . '/../ValidasSessao/protect.php');
+
 ?>
 
 <!DOCTYPE html>
@@ -16,7 +21,7 @@ include('/xampp1/htdocs/Projeto/PontoEletronicoPV/includes/php/IncluirPonto/save
 <body>
     <?php
     // Caminho relativo para a navbar.php
-    include('C:\xampp1\htdocs\Projeto\PontoEletronicoPV\includes\templetes\navbar.php');
+    include('C:\wamp64\www\Projeto\PontoEletronicoPV\includes\templetes\navbar.php');
     ?>
     <div class="content-wrapper">
         <div class="container-fluid">

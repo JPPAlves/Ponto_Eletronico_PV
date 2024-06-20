@@ -1,6 +1,10 @@
 <?php
 session_start();
-include('/xampp1/htdocs/Projeto/PontoEletronicoPV/includes/php/ValidasSessao/conexaodb.php');
+// Incluir o arquivo conexaodb.php
+include(__DIR__ . '/../ValidasSessao/conexaodb.php');
+// Incluir o arquivo proteção.php
+include(__DIR__ . '/../ValidasSessao/protect.php');
+
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_POST["location"]) && isset($_POST["time"]) && isset($_POST["today"])) {

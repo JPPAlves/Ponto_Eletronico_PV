@@ -1,6 +1,10 @@
 <?php
 session_start();
-include('/xampp1/htdocs/Projeto/PontoEletronicoPV/includes/php/ValidasSessao/conexaodb.php');
+// Incluir o arquivo conexao.php
+include(__DIR__ . '/../ValidasSessao/conexaodb.php');
+
+// Incluir o arquivo proteção.php
+include(__DIR__ . '/../ValidasSessao/protect.php');
 
 // Função para obter o endereço a partir das coordenadas
 function getAddressFromCoordinates($latitude, $longitude) {

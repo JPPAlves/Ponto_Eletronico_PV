@@ -1,3 +1,14 @@
+<?php
+session_start();
+
+// Incluir o arquivo conexao.php
+include(__DIR__ . '/../ValidasSessao/conexaodb.php');
+
+// Incluir o arquivo proteção.php
+include(__DIR__ . '/../ValidasSessao/protect.php');
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -11,7 +22,7 @@
 <body>
     <?php
     // Caminho relativo para a navbar.php
-    include('C:\xampp1\htdocs\Projeto\PontoEletronicoPV\includes\templetes\navbar.php');
+    include('C:\wamp64\www\Projeto\PontoEletronicoPV\includes\templetes\navbar.php');
     ?>
 
     <div class="content-wrapper">

@@ -1,6 +1,8 @@
 <?php
-include('/xampp1/htdocs/Projeto/PontoEletronicoPV/includes/php/ValidasSessao/validar_sessao.php');
+// Incluir o arquivo validar_sessao.php
+include(__DIR__ . '/../ValidasSessao/validar_sessao.php');
 ?>
+
 
 <!DOCTYPE html>
 <html lang="pt-BR">
