@@ -4,8 +4,6 @@ session_start();
 // Incluir o arquivo conexao.php
 include(__DIR__ . '/../ValidasSessao/conexaodb.php');
 
-
-
 if(isset($_POST['usuario']) && isset($_POST['senha'])) {
     if(empty($_POST['usuario'])) {
         echo "Preencha seu usuário";

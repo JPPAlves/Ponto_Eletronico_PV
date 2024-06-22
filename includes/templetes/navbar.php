@@ -59,7 +59,7 @@ include(__DIR__ . '/../php/ValidasSessao/protect.php');
           </li>
 
           <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Ferias">
-            <a class="nav-link" href="">
+            <a class="nav-link" href="/Projeto/PontoEletronicoPV/includes/php/Ferias/PrincipalFerias.php">
               <i class="fa fa-fw fa fa-sun-o "></i>
               <span class="nav-link-text">Ferias</span>
             </a>

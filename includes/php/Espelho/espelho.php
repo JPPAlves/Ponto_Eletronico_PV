@@ -6,6 +6,9 @@ include(__DIR__ . '/../ValidasSessao/conexaodb.php');
 
 // Incluir o arquivo proteção.php
 include(__DIR__ . '/../ValidasSessao/protect.php');
+
+// Incluir o arquivo navbar.php
+include(__DIR__ . '/../../templetes/navbar.php');
 ?>
 
 <!DOCTYPE html>
@@ -21,19 +24,12 @@ include(__DIR__ . '/../ValidasSessao/protect.php');
 </head>
 
 <body>
-<?php
-// Verificar o caminho completo
-echo __DIR__ . '/../../templetes/navbar.php';
 
-// Incluir o arquivo navbar.php
-include(__DIR__ . '/../../templetes/navbar.php');
-?>
- 
     <div class="content-wrapper">
         <div class="container-fluid">
             <div class="content">
                 <div class="filter-container">         
-                <h2>Tabela de Registros de Ponto Do Mês Atual</h2>
+                <h2 style="margin-top: 30px;"> Tabela de Registros de Ponto Do Mês Atual </h2>
                 </div>
                 <table id="reportTable">
 

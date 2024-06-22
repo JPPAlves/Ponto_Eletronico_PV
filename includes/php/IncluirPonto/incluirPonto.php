@@ -6,6 +6,8 @@ include(__DIR__ . '/../ValidasSessao/conexaodb.php');
 // Incluir o arquivo proteção.php
 include(__DIR__ . '/../ValidasSessao/protect.php');
 
+// Incluir o arquivo navbar.php
+include(__DIR__ . '/../../templetes/navbar.php');
 ?>
 
 <!DOCTYPE html>
@@ -19,10 +21,6 @@ include(__DIR__ . '/../ValidasSessao/protect.php');
 </head>
 
 <body>
-    <?php
-    // Caminho relativo para a navbar.php
-    include('C:\wamp64\www\Projeto\PontoEletronicoPV\includes\templetes\navbar.php');
-    ?>
     <div class="content-wrapper">
         <div class="container-fluid">
             <!-- Conteúdo da Página -->

@@ -1,5 +1,8 @@
 <?php
 include(__DIR__ . '/../ValidasSessao/protect.php');
+
+// Incluir o arquivo navbar.php
+include(__DIR__ . '/../../templetes/navbar.php');
 ?>
 
 <!DOCTYPE html>
@@ -12,14 +15,6 @@ include(__DIR__ . '/../ValidasSessao/protect.php');
 </head>
 
 <body>
-<?php
-// Verificar o caminho completo
-echo __DIR__ . '/../../templetes/navbar.php';
-
-// Incluir o arquivo navbar.php
-include(__DIR__ . '/../../templetes/navbar.php');
-?>
- 
     <div class="content-wrapper">
         <div class="container-fluid">
             <!-- Conteúdo da Página -->
