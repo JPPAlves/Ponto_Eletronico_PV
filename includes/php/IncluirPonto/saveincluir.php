@@ -52,18 +52,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->bind_param("sssssi", $location, $hora, $data_formatada, $tipo, $justificativa, $id_usuario);
 
         if ($stmt->execute()) {
-            echo "Registro salvo com sucesso!";
+            $_SESSION['mensagem'] = "Ponto registradas com sucesso!";
         } else {
-            echo "Erro ao salvar registro: " . $stmt->error;
+            $_SESSION['mensagem'] = "Erro ao registrar Ponto: " . $stmt->error;
         }
 
         $stmt->close();
+
     } else {
-        echo "Parâmetros ausentes!";
+        $_SESSION['mensagem'] = "Por favor, preencha todos os campos.";
     }
 } else {
     echo "Método de requisição inválido!";
 }
 
 $conn->close();
+
+
 ?>

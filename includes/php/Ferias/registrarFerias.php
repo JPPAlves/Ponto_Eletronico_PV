@@ -111,7 +111,7 @@ include(__DIR__ . '/../../templetes/navbar.php');
                     <div class="alert alert-success" role="alert">
                         <?php echo $_SESSION['mensagem']; ?>
                     </div>
-                    <?php unset($_SESSION['mensagem']); // Limpar a mensagem depois de exibida ?>
+                    <?php unset($_SESSION['mensagem']);          ?>
                 <?php endif; ?>
 
                 <form class="form-incluir" method="POST" action="saveFerias.php">

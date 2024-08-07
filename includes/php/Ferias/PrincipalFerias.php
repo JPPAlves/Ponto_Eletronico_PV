@@ -58,7 +58,7 @@ if (!$stmt) {
                     <div class="alert alert-success" role="alert">
                         <?php echo $_SESSION['mensagem_exclusao']; ?>
                     </div>
-                    <?php unset($_SESSION['mensagem_exclusao']); // Limpar a mensagem depois de exibida ?>
+                    <?php unset($_SESSION['mensagem_exclusao']);  ?>
                 <?php endif; ?>
                 
                 <div class="jumbotron">

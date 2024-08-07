@@ -8,7 +8,12 @@ include(__DIR__ . '/../ValidasSessao/protect.php');
 
 // Incluir o arquivo navbar.php
 include(__DIR__ . '/../../templetes/navbar.php');
+
+
 ?>
+
+
+
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -26,6 +31,16 @@ include(__DIR__ . '/../../templetes/navbar.php');
             <!-- Conteúdo da Página -->
             <div class="content">
                 <h3>Incluir Batida</h3>
+                
+                 <!-- Verificar se há mensagem de sucesso -->
+                 <?php if (isset($_SESSION['mensagem'])): ?>
+                    <div class="alert alert-success" role="alert">
+                        <?php echo $_SESSION['mensagem']; ?>
+                    </div>
+                    <?php unset($_SESSION['mensagem']);  ?>
+                <?php endif; ?>
+
+
                 <form class="form-incluir" method="POST" action="saveincluir.php">
                     <div class="form-group">
                         <div class="endereco" id="endereco">
