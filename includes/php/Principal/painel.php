@@ -3,7 +3,7 @@ include(__DIR__ . '/../ValidasSessao/protect.php');
 
 // Incluir o arquivo navbar.php
 include(__DIR__ . '/../../templetes/navbar.php');
-?>
+?>                                                                                              
 
 <!DOCTYPE html>
 <html lang="pt-br">

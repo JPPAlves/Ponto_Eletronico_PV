@@ -31,7 +31,6 @@ function showAddress(position) {
             // Verifica se a resposta da API é bem-sucedida
             if (data.status === "OK") {
                 // Exibe o endereço na div "local"
-                
                 document.getElementById('local').innerHTML =  data.results[0].formatted_address;
             } else {
                 console.log("Erro ao obter o endereço: " + data.status);
