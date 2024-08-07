@@ -50,3 +50,24 @@ controlBox.addEventListener("mouseleave", () => {
 
 // Iniciar a reprodução automática do slider
 autoPlay();
+
+
+ // Visualizar Senha 
+        // Visualizar Senha
+        document.getElementById('toggleSenha').addEventListener('click', function () {
+          var senhaInput = document.getElementById('senha');
+          var senhaIcon = document.getElementById('toggleSenha');
+          
+          if (senhaInput.type === 'password') {
+              senhaInput.type = 'text'; 
+              senhaIcon.classList.remove('fa-eye'); 
+              senhaIcon.classList.add('fa-eye-slash'); 
+          } else {
+              senhaInput.type = 'password'; 
+              senhaIcon.classList.remove('fa-eye-slash'); 
+              senhaIcon.classList.add('fa-eye'); 
+          }
+      });
+
+
+
