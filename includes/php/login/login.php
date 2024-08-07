@@ -3,7 +3,6 @@
 include(__DIR__ . '/../ValidasSessao/validar_sessao.php');
 ?>
 
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -20,54 +19,39 @@ include(__DIR__ . '/../ValidasSessao/validar_sessao.php');
             <div class="frame">
                 <img src="https://classic.exame.com/wp-content/uploads/2016/09/size_960_16_9_ponto-eletronico1.jpg?quality=70&strip=info&w=960/pic-1.png" class="active">
                 <img src="https://www.uff.br/sites/default/files/styles/large/public/prazo.jpg?itok=6qScLe44" alt="">
-                <img src="https://spbancarios.com.br/sites/default/files/styles/interna_grande/public/destaques/2023-05/site-itau-horas-acordo.webp?itok=W7D3h7WQ" class="">
+                <img src="https://spbancarios.com.br/sites/default/files/styles/interna_grande/public/destaques/2023-05/site-itau-horas-acordo.webp?itok=W7D3h7WQ" alt="">
                 <img src="https://www.sindojusmg.org.br/site/wp-content/uploads/2020/07/BANNER-SITE-7.jpg" alt="">
                 <img src="https://www.bizneo.com/blog/wp-content/uploads/2022/02/Registro-de-ponto-810x455.jpg" alt="">
             </div>
             <div class="overlay"></div>
-            <div class="control">
-                <div class="bullet bullet-1 active">
-                    <div class="inner"></div>
-                </div>
-                <div class="bullet bullet-2">
-                    <div class="inner"></div>
-                </div>
-                <div class="bullet bullet-3">
-                    <div class="inner"></div>
-                </div>
-                <div class="bullet bullet-4">
-                    <div class="inner"></div>
-                </div>
-                <div class="bullet bullet-5">
-                    <div class="inner"></div>
-                </div>
-            </div>
         </div>
-    <!--div Formulario login -->
+        
+        <!--div Formulario login -->
         <div class="form-section">
             <div class="inner-content">
                 <div class="logo">
                     <img src=".\..\..\..\assets\img\icons8-visit-100.png" alt="Logo">
                 </div>
                 <div class="header">
-                    Faça o login <span>Nome do Sistema</span>
+                    Faça o login - <span> Ponto móvel</span>
                 </div>
 
                 <form class="form-control" method="POST">
                     <div class="input-wrapper">
                         <div class="input-field">
                             <i class="fas fa-user"></i>
-                            <input name="usuario" class="input is-large" type="text" placeholder="Nome do Usuario">
+                            <input name="usuario" class="input is-large" type="text" placeholder="Nome do Usuario" required>
                         </div>
 
                         <div class="input-field">
                             <i class="fas fa-lock"></i>
-                            <input name="senha" class="input is-large" type="password" placeholder="Sua senha">
+                            <input id="senha" name="senha" class="input is-large" type="password" placeholder="Sua senha" required>
+                            <i class="fas fa-eye" id="toggleSenha" style="cursor:pointer;pointer-events: auto; margin-top:-12%; right: 10px;"></i>
                         </div>
                     </div>
                     <div class="login">
-                        <button class="Entrar-btn " type="submit">
-                            <div type="submit" class="Entrar">Entrar</div>
+                        <button class="Entrar-btn" type="submit">
+                            <div class="Entrar">Entrar</div>
                         </button>
                     </div>
 
@@ -79,8 +63,7 @@ include(__DIR__ . '/../ValidasSessao/validar_sessao.php');
                     <div class="esqueceuSenha">
                         <button class="esqueceuSenha-btn senha" type="button">
                             <i class="fab fa fa-key"></i>
-                            Esqueceu Senha?
-                            <mat-ripple color="rgba(255, 255, 255, 0.09)" />
+                            Já abriu o Chamado?
                         </button>
                     </div>
                 </form>
@@ -88,6 +71,23 @@ include(__DIR__ . '/../ValidasSessao/validar_sessao.php');
         </div>
     </div>
 
-</body>
+    <script>
+        // Visualizar Senha não quiz funcionar importando de outra js press f
+        document.getElementById('toggleSenha').addEventListener('click', function () {
+            var senhaInput = document.getElementById('senha');
+            var senhaIcon = document.getElementById('toggleSenha');
+            
+            if (senhaInput.type === 'password') {
+                senhaInput.type = 'text'; 
+                senhaIcon.classList.remove('fa-eye'); 
+                senhaIcon.classList.add('fa-eye-slash'); 
+            } else {
+                senhaInput.type = 'password'; 
+                senhaIcon.classList.remove('fa-eye-slash'); 
+                senhaIcon.classList.add('fa-eye'); 
+            }
+        });
+    </script>
 
+</body>
 </html>
