@@ -32,10 +32,13 @@ if (!$stmt) {
     $stmt->close();
 }
 
+function formatarData($data) {
+    return DateTime::createFromFormat('Y-m-d', $data)->format('d/m/Y');
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -47,7 +50,6 @@ if (!$stmt) {
         }
     </style>
 </head>
-
 <body>
     <div class="content-wrapper">
         <div class="container-fluid">
@@ -84,8 +86,8 @@ if (!$stmt) {
                     <tbody>
                         <?php while ($row = $result->fetch_assoc()): ?>
                         <tr <?php if ($row['excluido'] == 1) echo 'class="ferias-excluidas"'; ?>>
-                            <td><?php echo $row['data_inicio']; ?></td>
-                            <td><?php echo $row['data_fim']; ?></td>
+                            <td><?php echo formatarData($row['data_inicio']); ?></td>
+                            <td><?php echo formatarData($row['data_fim']); ?></td>
                             <td>
                                 <?php if ($row['excluido'] == 1): ?>
                                     <span class="badge bg-danger">Excluído</span>
@@ -107,9 +109,7 @@ if (!$stmt) {
             </div>
         </div>
     </div>
-
 </body>
-
 </html>
 
 <?php

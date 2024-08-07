@@ -25,38 +25,39 @@ $sql = "SELECT data, hora, tipo, justificativa
 $query = mysqli_query($conn, $sql);
 
 $registros = array();
+// Dentro do loop que processa os registros
 while ($result = mysqli_fetch_assoc($query)) {
-    // Agrupar os registros pela data
     $data = $result['data'];
     $tipo = $result['tipo'];
     $hora = $result['hora'];
     $justificativa = $result['justificativa'];
 
-    if (!isset($registros[$data])) {
-        $registros[$data] = array(
-            'data' => $data,
+    // Converter a data para o formato brasileiro
+    $dataFormatada = DateTime::createFromFormat('Y-m-d', $data)->format('d/m/Y');
+
+    if (!isset($registros[$dataFormatada])) {
+        $registros[$dataFormatada] = array(
+            'data' => $dataFormatada,
             'entradas' => array(),
             'saidas' => array(),
             'temJustificativa' => false
         );
     }
 
-    // Adicionar entrada ou saída ao registro correspondente
     if ($tipo == 'ENTRADA') {
-        $registros[$data]['entradas'][] = array(
+        $registros[$dataFormatada]['entradas'][] = array(
             'hora' => $hora,
             'justificativa' => $justificativa
         );
     } elseif ($tipo == 'SAIDA') {
-        $registros[$data]['saidas'][] = array(
+        $registros[$dataFormatada]['saidas'][] = array(
             'hora' => $hora,
             'justificativa' => $justificativa
         );
     }
 
-    // Verificar se há justificativa para essa data
     if (!empty($justificativa)) {
-        $registros[$data]['temJustificativa'] = true;
+        $registros[$dataFormatada]['temJustificativa'] = true;
     }
 }
 
